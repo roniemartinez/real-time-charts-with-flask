@@ -1,6 +1,6 @@
 # Creating Real-Time Charts with Flask
 
-Example codes for the blog [Creating Real-Time Charts with Flask](https://blog.easyaspy.org/preview/10/2019-04-30-creating-real-time-charts-with-flask)
+Sample application for the blog [Creating Real-Time Charts with Flask](https://blog.easyaspy.org/preview/10/2019-04-30-creating-real-time-charts-with-flask)
 
 ## Author
 
