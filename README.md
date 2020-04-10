@@ -1,6 +1,6 @@
 # Creating Real-Time Charts with Flask
 
-Sample application for the blog [Creating Real-Time Charts with Flask]https://ron.sh/creating-real-time-charts-with-flask/)
+Sample application for the blog [Creating Real-Time Charts with Flask](https://ron.sh/creating-real-time-charts-with-flask/)
 
 ## Author
 
