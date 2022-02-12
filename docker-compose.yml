@@ -4,7 +4,7 @@ services:
   web:
     build: .
     image: real-time-charts-with-flask
-    command: poetry run python application.py
+    command: python application.py
     environment:
       FLASK_DEBUG: 1
     volumes:

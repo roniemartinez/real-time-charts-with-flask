@@ -8,7 +8,7 @@ from typing import Iterator
 
 from flask import Flask, Response, render_template, request, stream_with_context
 
-logging.basicConfig(stream=sys.stdout, level=logging.INFO)
+logging.basicConfig(stream=sys.stdout, level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
 
 application = Flask(__name__)
@@ -26,8 +26,13 @@ def generate_random_data() -> Iterator[str]:
 
     :return: String containing current timestamp (YYYY-mm-dd HH:MM:SS) and randomly generated data.
     """
+    if request.headers.getlist("X-Forwarded-For"):
+        client_ip = request.headers.getlist("X-Forwarded-For")[0]
+    else:
+        client_ip = request.remote_addr or ""
+
     try:
-        logger.info("Client %s connected", request.remote_addr)
+        logger.info("Client %s connected", client_ip)
         while True:
             json_data = json.dumps(
                 {
@@ -38,12 +43,15 @@ def generate_random_data() -> Iterator[str]:
             yield f"data:{json_data}\n\n"
             time.sleep(1)
     except GeneratorExit:
-        logger.info("Client %s disconnected", request.remote_addr)
+        logger.info("Client %s disconnected", client_ip)
 
 
 @application.route("/chart-data")
 def chart_data() -> Response:
-    return Response(stream_with_context(generate_random_data()), mimetype="text/event-stream")
+    response = Response(stream_with_context(generate_random_data()), mimetype="text/event-stream")
+    response.headers["Cache-Control"] = "no-cache"
+    response.headers["X-Accel-Buffering"] = "no"
+    return response
 
 
 if __name__ == "__main__":

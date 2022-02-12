@@ -9,4 +9,5 @@ RUN mkdir /code
 WORKDIR /code
 COPY . /code/
 
+RUN poetry config virtualenvs.create false
 RUN poetry install

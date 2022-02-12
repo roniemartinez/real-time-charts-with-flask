@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "real-time-charts-with-flask"
-version = "0.3.0"
+version = "0.4.0"
 description = "Sample application for the blog Creating Real-Time Charts with Flask"
 authors = ["Ronie Martinez <ronmarti18@gmail.com>"]
 license = "MIT"
@@ -8,6 +8,8 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = ">=3.6.2,<4.0"
 Flask = "^2.0.2"
+gunicorn = "^20.1.0"
+gevent = "^21.12.0"
 
 [tool.poetry.dev-dependencies]
 autoflake = "^1.4"
