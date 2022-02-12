@@ -5,7 +5,9 @@ services:
     build: .
     image: real-time-charts-with-flask
     command: poetry run python application.py
+    environment:
+      FLASK_DEBUG: 1
     volumes:
       - .:/code
     ports:
-      - 5000:5000
+      - "127.0.0.1:5000:5000"
