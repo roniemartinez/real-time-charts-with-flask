@@ -16,7 +16,7 @@ autoflake = "^1.4"
 black = "^22.1.0"
 isort = "^5.10.1"
 mypy = "^0.942"
-pyproject-flake8 = "^0.0.1-alpha.2"
+pyproject-flake8 = "^0.0.1a3"
 
 [tool.isort]
 line_length = 120
