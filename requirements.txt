@@ -1,5 +1,5 @@
 cffi==1.15.0; platform_python_implementation == "CPython" and sys_platform == "win32" and (python_version >= "2.7" and python_full_version < "3.0.0" or python_version > "3.5")
-click==8.0.3; python_version >= "3.6"
+click==8.1.2; python_version >= "3.6"
 colorama==0.4.4; python_version >= "3.6" and python_full_version < "3.0.0" and platform_system == "Windows" or platform_system == "Windows" and python_version >= "3.6" and python_full_version >= "3.5.0"
 dataclasses==0.8; python_version >= "3.6" and python_version < "3.7"
 flask==2.0.3; python_version >= "3.6"
