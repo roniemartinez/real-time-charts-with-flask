@@ -15,9 +15,6 @@ lint:
 
 .PHONY: tag
 tag:
-	VERSION=`poetry version | grep -o -E "\d+\.\d+\.\d+"`; \
-	git tag -s -a $$VERSION -m "Release $$VERSION"
-
-.PHONY: requirements.txt
-requirements.txt:
-	poetry export -f requirements.txt --output requirements.txt --without-hashes
+	VERSION=`poetry version | grep -o -E "\d+\.\d+\.\d+(-\w+\.\d+)?"`; \
+	git tag -s -a $$VERSION -m "Release $$VERSION"; \
+	echo "Tagged $$VERSION";
