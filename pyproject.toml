@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "real-time-charts-with-flask"
-version = "0.6.0"
+version = "0.6.1"
 description = "Sample application for the blog Creating Real-Time Charts with Flask"
 authors = ["Ronie Martinez <ronmarti18@gmail.com>"]
 license = "MIT"
