@@ -1,7 +1,7 @@
 FROM python:3.11-slim-buster
 LABEL maintainer="ronmarti18@gmail.com"
 
-RUN pip install poetry
+RUN --no-cache-dir pip install poetry
 
 ENV PYTHONUNBUFFERED=1
 
