@@ -9,7 +9,7 @@ license = "MIT"
 python = ">=3.8,<4.0"
 Flask = "^3.0.3"
 gevent = "^24.2.1"
-gunicorn = "^21.2.0"
+gunicorn = "^22.0.0"
 
 [tool.poetry.dev-dependencies]
 autoflake = "^1.7"
