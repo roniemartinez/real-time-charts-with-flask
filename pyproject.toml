@@ -13,7 +13,7 @@ gunicorn = "^22.0.0"
 
 [tool.poetry.dev-dependencies]
 autoflake = "^1.7"
-black = "^24.4.1"
+black = "^24.4.2"
 isort = "^5.13.2"
 mypy = "^1.10"
 pyproject-flake8 = "^5.0.4"
