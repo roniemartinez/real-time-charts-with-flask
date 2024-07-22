@@ -15,7 +15,7 @@ gunicorn = "^22.0.0"
 autoflake = "^1.7"
 black = "^24.4.2"
 isort = "^5.13.2"
-mypy = "^1.10"
+mypy = "^1.11"
 pyproject-flake8 = "^5.0.4"
 
 [tool.isort]
