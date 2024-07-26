@@ -2,6 +2,8 @@
 
 Sample application for the blog [Creating Real-Time Charts with Flask](https://ron.sh/creating-real-time-charts-with-flask/)
 
+[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/roniemartinez/real-time-charts-with-flask/tree/deploy-to-do-button&refcode=5b9c0bd05e4e)
+
 ## Demo
 
 Go to https://chart.ron.sh/ to see this in action.
