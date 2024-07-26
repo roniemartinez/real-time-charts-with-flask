@@ -4,4 +4,4 @@ spec:
   - name: web
     git:
       branch: deploy-to-do-button
-      repo_clone_url: https://github.com:roniemartinez/real-time-charts-with-flask.git
+      repo_clone_url: https://github.com/roniemartinez/real-time-charts-with-flask.git
