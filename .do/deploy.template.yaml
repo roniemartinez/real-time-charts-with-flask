@@ -1,0 +1,7 @@
+spec:
+  name: real-time-charts-with-flask
+  services:
+  - name: web
+    git:
+      branch: deploy-to-do-button
+      repo_clone_url: git@github.com:roniemartinez/real-time-charts-with-flask.git
