@@ -46,7 +46,7 @@ def generate_random_data() -> Iterator[str]:
         logger.info("Client %s disconnected", client_ip)
 
 
-@application.route("/chart-data")
+@application.route("/chart-data", methods=["GET", "POST"])
 def chart_data() -> Response:
     response = Response(stream_with_context(generate_random_data()), mimetype="text/event-stream")
     response.headers["Cache-Control"] = "no-cache"
