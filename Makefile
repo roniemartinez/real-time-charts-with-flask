@@ -18,3 +18,8 @@ tag:
 	VERSION=`poetry version --short`; \
 	git tag -s -a $$VERSION -m "Release $$VERSION"; \
 	echo "Tagged $$VERSION";
+
+
+.PHONY: requirements.txt
+requirements.txt:
+	poetry export -f requirements.txt --output requirements.txt
