@@ -1,4 +1,4 @@
-FROM python:3.11-slim-buster
+FROM python:3.12.0b2-slim-buster
 LABEL maintainer="ronmarti18@gmail.com"
 
 RUN pip install poetry
