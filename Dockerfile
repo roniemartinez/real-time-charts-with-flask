@@ -1,4 +1,4 @@
-FROM python:3.13.14-slim-bookworm
+FROM python:3.14.6-slim-bookworm
 LABEL maintainer="ronmarti18@gmail.com"
 
 COPY --from=ghcr.io/astral-sh/uv:0.10.11 /uv /uvx /bin/
