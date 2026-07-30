@@ -9,11 +9,22 @@ Go to https://chart.ron.sh/ to see this in action.
 ## Build and run
 
 ```bash
-docker-compose build
-docker-compose up  # or "docker-compose up -d" to run in detached mode 
+docker compose build
+docker compose up  # or "docker compose up -d" to run in detached mode
 ```
 
 Open http://127.0.0.1:5000/ in browser
+
+## Development
+
+Dependencies are managed with [uv](https://docs.astral.sh/uv/) and tasks are run with
+[Task](https://taskfile.dev/).
+
+```bash
+task install
+task format
+task lint
+```
 
 ## Author
 
