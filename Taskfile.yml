@@ -1,0 +1,28 @@
+version: '3'
+
+tasks:
+  install:
+    desc: Sync the virtual environment from uv.lock
+    cmds:
+      - uv sync
+
+  format:
+    desc: Apply lint fixes and format the code
+    cmds:
+      - uv run ruff check --fix .
+      - uv run ruff format .
+
+  lint:
+    desc: Check lint rules, formatting and types
+    cmds:
+      - uv run ruff check .
+      - uv run ruff format --check .
+      - uv run mypy .
+
+  tag:
+    desc: Create a signed git tag from the project version
+    cmds:
+      - |
+        VERSION=`uv version --short`; \
+        git tag -s -a $VERSION -m "Release $VERSION"; \
+        echo "Tagged $VERSION";

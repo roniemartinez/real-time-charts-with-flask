@@ -1,13 +1,16 @@
-FROM python:3.12.0b2-slim-buster
+FROM python:3.13.14-slim-bookworm
 LABEL maintainer="ronmarti18@gmail.com"
 
-RUN pip install poetry
+COPY --from=ghcr.io/astral-sh/uv:0.10.11 /uv /uvx /bin/
 
-ENV PYTHONUNBUFFERED=1
+ENV PYTHONUNBUFFERED=1 \
+    UV_COMPILE_BYTECODE=1 \
+    UV_LINK_MODE=copy \
+    UV_PROJECT_ENVIRONMENT=/usr/local
 
-RUN mkdir /code
 WORKDIR /code
-COPY . /code/
 
-RUN poetry config virtualenvs.create false
-RUN poetry install
+COPY pyproject.toml uv.lock /code/
+RUN uv sync --frozen --no-dev --no-install-project
+
+COPY . /code/
