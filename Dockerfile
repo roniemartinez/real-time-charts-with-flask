@@ -8,9 +8,13 @@ ENV PYTHONUNBUFFERED=1 \
     UV_LINK_MODE=copy \
     UV_PROJECT_ENVIRONMENT=/usr/local
 
+RUN useradd --create-home --user-group app
+
 WORKDIR /code
 
 COPY pyproject.toml uv.lock /code/
 RUN uv sync --frozen --no-dev --no-install-project
 
-COPY . /code/
+COPY --chown=app:app . /code/
+
+USER app
