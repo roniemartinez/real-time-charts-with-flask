@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "flask>=3.0.3",
-    "gevent>=24.2.1",
+    "gevent>=26.8.0",
     "gunicorn>=23.0.0",
 ]
 
