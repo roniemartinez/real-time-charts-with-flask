@@ -20,7 +20,7 @@ repository = "https://github.com/roniemartinez/real-time-charts-with-flask"
 [dependency-groups]
 dev = [
     "mypy>=1.14",
-    "pre-commit>=4.0",
+    "pre-commit>=4.6.2",
     "ruff>=0.16.2",
 ]
 
